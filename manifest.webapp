@@ -1,0 +1,18 @@
+{
+	"version": "0.1",
+	"name": "Notes Keeper",
+	"description": "Simple yet elegant notes keeping app",
+	"launch_path": "/index.html",
+	"icons": {
+		"16": "/img/icons/icon-16.png",
+		"48": "/img/icons/icon-48.png",
+		"128": "/img/icons/icon-128.png"
+	},
+	"developer": {
+		"name": "Jayant Bhawal",
+		"url": "http://jayantbhawal.in"
+	},
+	"installs_allowed_from": ["*"],
+	"appcache_path": "/cache.manifest",
+	"default_locale": "en"
+}

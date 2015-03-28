@@ -1,0 +1,97 @@
+<html>
+
+<head>
+	<title>Notes Keeper</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="jqmobile/jquery.mobile-1.4.5.css">
+	<link rel="stylesheet" type="text/less" href="css/fonts.less">
+	<link rel="stylesheet" type="text/less" href="css/style.less">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="jqmobile/jquery.mobile-1.4.5.js"></script>
+	<script type="text/javascript" src="js/less.min.js"></script>
+</head>
+
+<body>
+	<div id="home" class="container-fluid" data-role="page">
+		<div class="ui-content text-center" data-role="main">
+			<h1 style="text-shadow: 2px 2px 3px rgba(0,0,0,0.5) !important;">Notes Keeper</h1>
+			<h3 style="text-shadow: 2px 2px 3px rgba(0,0,0,0.5) !important;">Simple yet elegant notes keeping app</h3>
+			<div data-role="controlgroup"><a class="ui-btn ui-icon-carat-r ui-btn-icon-left" href="#pageone" data-transition="slide">Add a note</a><a id="viewAllNotes" class="ui-btn ui-icon-carat-r ui-btn-icon-left" data-transition="slide" href="#pagetwo">View all notes</a></div><a style="background-color: rgb(255, 71, 0); color: white;" class="ui-btn ui-icon-carat-r ui-btn-icon-left ui-corner-all" href="#popupDelete" data-rel="popup" data-transition="fade">Delete All Notes</a></div>
+		<div style="background-color: orange; text-shadow: none; color: white;" id="popupDelete" data-role="popup" data-overlay-theme="b" class="ui-content" data-position-to="window">
+			<a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right" data-rel="back"></a>
+			<h2>Are you sure?</h2>
+			<h4>This action is irreversible and it will delete ALL your notes!</h4>
+			<div data-role="controlgroup">
+				<a style="background-color: red; color: white;" id="clearAllNotes" href="#" class="ui-btn ui-icon-check ui-btn-icon-left">YES! BURN EM!</a>
+				<a style="background-color: green; color: white;" href="#" class="ui-btn ui-icon-delete ui-btn-icon-left" data-rel="back">NOPE! Maybe later.</a>
+			</div>
+		</div>
+	</div>
+	<div id="pageone" class="container-fluid" data-role="page">
+		<div data-role="header" data-position="fixed">
+			<a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-btn-icon-notext" data-rel="back"></a>
+			<h1>Add a note</h1>
+		</div>
+		<div class="ui-content" data-role="main">
+			<form>
+				<label for="noteTitle">Title</label>
+				<textarea type="text" name="title" id="noteTitle" tabindex="1"></textarea>
+				<label for="noteData" maxlength="">Note Text</label>
+				<textarea id="noteData" name="data" autofocus tabindex="2"></textarea>
+				<a id="saveNote" class="ui-btn ui-icon-carat-r ui-btn-icon-left ui-corner-all" tabindex="3">Save Note</a>
+			</form>
+			<a id="discard" class="ui-btn ui-icon-delete ui-btn-icon-left ui-corner-all" data-rel="back">Discard</a>
+		</div>
+	</div>
+	<div id="pagetwo" class="container-fluid" data-role="page">
+		<div data-role="header" data-position="fixed">
+			<a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-btn-icon-notext" data-rel="back"></a>
+			<h1>Notes List</h1>
+		</div>
+		<div id="listNotes" class="ui-content" data-role="main"></div>
+	</div>
+	<div id="pagedialog" class="container-fluid" data-role="page" data-dialog="true">
+		<div data-role="header" data-position="fixed">
+			<h1>FxOS Dummy P2</h1>
+		</div>
+		<div class="ui-content" data-role="main">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga magnam ex eos iusto quis sunt recusandae consequatur amet doloribus libero voluptates, ullam enim expedita, ducimus ratione ipsum, autem voluptate eum.</p>
+			<a class="ui-btn ui-icon-carat-r ui-btn-icon-left" href="#pageone">Go to Page 1</a></div>
+	</div>
+	<div id="pagethree" class="container-fluid" data-role="page">
+		<div data-role="header" data-position="fixed">
+			<a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-btn-icon-notext" data-rel="back"></a>
+			<h1>FxOS Dummy P3</h1>
+		</div>
+		<div class="ui-content" data-role="main">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga magnam ex eos iusto quis sunt recusandae consequatur amet doloribus libero voluptates, ullam enim expedita, ducimus ratione ipsum, autem voluptate eum.</p>
+			<a href="#home" data-transition="flow" class="ui-btn ui-icon-home ui-btn-icon-left">Go to Home</a></div>
+		<div data-role="footer" data-position="fixed">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+	</div>
+	<style type="text/css">
+	textarea {
+		height: 51px;
+		resize: none;
+		outline: orange !important;
+	}
+	*{
+		word-break: break-word;
+		text-shadow: none !important;
+	}
+	*:focus {
+		box-shadow: 0px 0px 5px black !important;
+	}
+	label {
+		font-weight: bolder !important;
+	}
+	a, button {
+		text-shadow: none !important;
+	}
+	</style>
+	<script type="text/javascript" src="js/functions.js"></script>
+</body>
+
+</html>
